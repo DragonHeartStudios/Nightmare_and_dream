@@ -1,0 +1,23 @@
+# Godot 4+
+.import/
+.godot/
+.export/
+
+# Exécutables / builds
+*.exe
+*.pck
+*.app
+*.zip
+
+# macOS
+.DS_Store
+
+# Logs / temporaires
+*.log
+*.tmp
+
+# Dossiers inutiles
+build/
+dist/
+Library/
+Temp/
