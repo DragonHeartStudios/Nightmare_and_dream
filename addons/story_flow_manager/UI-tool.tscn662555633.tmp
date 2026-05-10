@@ -1,0 +1,506 @@
+[gd_scene load_steps=19 format=3 uid="uid://bk07dp8i5hx3k"]
+
+[ext_resource type="Script" uid="uid://btujryi2roxum" path="res://addons/story_flow_manager/ui_tool.gd" id="1_p2qtr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekq0r"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.11524307, 0.5450404, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hc8vb"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.078043886, 0.03547689, 0.2981052, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2da4l"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.12086565, 0.10331384, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_kiv5y"]
+content_margin_left = 0.0
+content_margin_top = 4.0
+content_margin_right = 0.0
+content_margin_bottom = 4.0
+thickness = 5
+vertical = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4uksy"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.16, 0.16, 0.16, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kiv5y"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.20871028, 0.2087101, 0.20871013, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txe5u"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.15889186, 0.14736357, 0.3655658, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_36j3b"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0.25461778, 0.05667059, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xar8w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3loh0"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8gcle"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sb85m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_drxe3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nbpy2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hr32t"]
+
+[sub_resource type="Theme" id="Theme_ch8eb"]
+Button/styles/disabled = SubResource("StyleBoxEmpty_xar8w")
+Button/styles/normal = SubResource("StyleBoxFlat_3loh0")
+SpinBox/colors/down_disabled_icon_modulate = Color(0.875, 0.875, 0.875, 0.5)
+SpinBox/styles/down_background = SubResource("StyleBoxEmpty_8gcle")
+SpinBox/styles/down_background_disabled = SubResource("StyleBoxEmpty_sb85m")
+SpinBox/styles/down_background_hovered = SubResource("StyleBoxEmpty_drxe3")
+SpinBox/styles/down_background_pressed = SubResource("StyleBoxEmpty_nbpy2")
+SpinBox/styles/field_and_buttons_separator = SubResource("StyleBoxEmpty_hr32t")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xar8w"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1.2513996e-06, 0.5644113, 0.8552535, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Ui-tool" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p2qtr")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="background" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="timeline" type="VBoxContainer" parent="MarginContainer/background"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/background/timeline"]
+layout_mode = 2
+text = "timeline"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/background/timeline"]
+custom_minimum_size = Vector2(645.3, 0)
+layout_mode = 2
+theme_override_constants/separation = 23
+alignment = 1
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/background/timeline/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+rounded = true
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/background/timeline/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/background/timeline"]
+custom_minimum_size = Vector2(645.3, 0)
+layout_mode = 2
+theme_override_constants/separation = 23
+alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/background/timeline/HBoxContainer2"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ekq0r")
+text = "instant preview this state"
+
+[node name="Button2" type="Button" parent="MarginContainer/background/timeline/HBoxContainer2"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_hc8vb")
+text = "before"
+
+[node name="Button3" type="Button" parent="MarginContainer/background/timeline/HBoxContainer2"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_2da4l")
+text = "after"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/background"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="action and condition" type="HBoxContainer" parent="MarginContainer/background"]
+layout_mode = 2
+alignment = 1
+
+[node name="add action" type="VBoxContainer" parent="MarginContainer/background/action and condition"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/background/action and condition/add action"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "add action"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/background/action and condition/add action"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="MenuButton" type="MenuButton" parent="MarginContainer/background/action and condition/add action"]
+layout_mode = 2
+text = "add actions..."
+item_count = 7
+popup/item_0/text = "move a pnj"
+popup/item_0/id = 0
+popup/item_1/text = "give items to the player"
+popup/item_1/id = 1
+popup/item_2/text = "unlock door"
+popup/item_2/id = 2
+popup/item_3/text = "change dialog"
+popup/item_3/id = 3
+popup/item_4/text = "change sky"
+popup/item_4/id = 4
+popup/item_5/text = "ajouter une pensée"
+popup/item_5/id = 5
+popup/item_6/text = "ajouter une nouvelle quetes/objectif"
+popup/item_6/id = 6
+
+[node name="Label2" type="Label" parent="MarginContainer/background/action and condition/add action"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "choice state/timeline : 0"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/background/action and condition/add action"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/background/action and condition/add action"]
+layout_mode = 2
+text = "add to this state"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/background/action and condition"]
+layout_mode = 2
+theme_override_constants/separation = 50
+theme_override_styles/separator = SubResource("StyleBoxLine_kiv5y")
+
+[node name="add condition" type="VBoxContainer" parent="MarginContainer/background/action and condition"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/background/action and condition/add condition"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "add condition"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/background/action and condition/add condition"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="MenuButton" type="MenuButton" parent="MarginContainer/background/action and condition/add condition"]
+layout_mode = 2
+text = "add conditions..."
+item_count = 4
+popup/item_0/text = "player had this item"
+popup/item_0/id = 0
+popup/item_1/text = "door is opened"
+popup/item_1/id = 1
+popup/item_2/text = "door is unlocked"
+popup/item_2/id = 2
+popup/item_3/text = "player speaked with this pnj"
+popup/item_3/id = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/background/action and condition/add condition"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "state/timeline : 0"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/background/action and condition/add condition"]
+layout_mode = 2
+tick_count = 1
+ticks_on_borders = true
+ticks_position = 2
+
+[node name="Button" type="Button" parent="MarginContainer/background/action and condition/add condition"]
+layout_mode = 2
+text = "add this rule for this state"
+
+[node name="Containerpanel" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4uksy")
+
+[node name="MarginContainer" type="MarginContainer" parent="Containerpanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="PNJ OPTION" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menu_pnj" type="OptionButton" parent="PNJ OPTION"]
+layout_mode = 2
+tooltip_text = "choise pnj"
+selected = 0
+item_count = 5
+popup/item_0/text = "choise a pnj"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_1/text = "PNJ"
+popup/item_1/id = 2
+popup/item_1/separator = true
+popup/item_2/text = "inspecter gaga"
+popup/item_2/id = 1
+popup/item_3/text = "sire conference"
+popup/item_3/id = 3
+popup/item_4/text = "lenny"
+popup/item_4/id = 4
+
+[node name="label_state" type="Label" parent="PNJ OPTION"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "choice state : 0"
+horizontal_alignment = 1
+
+[node name="HSlider_state" type="HSlider" parent="PNJ OPTION"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PNJ OPTION"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kiv5y")
+
+[node name="MarginContainer" type="MarginContainer" parent="PNJ OPTION/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="transforme hbox" type="VBoxContainer" parent="PNJ OPTION/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="transofrmelabel" type="Label" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox"]
+layout_mode = 2
+text = "trasforme"
+
+[node name="direction" type="PanelContainer" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_txe5u")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer"]
+layout_mode = 2
+text = " direction:"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label3" type="Label" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "  x"
+
+[node name="direction_x" type="SpinBox" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "  y"
+
+[node name="direction_y" type="SpinBox" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "  z"
+
+[node name="direction_z" type="SpinBox" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="apply_current_direction" type="Button" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+text = "apply current"
+
+[node name="position" type="PanelContainer" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_36j3b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer"]
+layout_mode = 2
+text = " position:"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label3" type="Label" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "  x"
+
+[node name="position_x" type="SpinBox" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "  y"
+
+[node name="position_y" type="SpinBox" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_ch8eb")
+
+[node name="Label5" type="Label" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "  z"
+
+[node name="position_z" type="SpinBox" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="apply_current_position" type="Button" parent="PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "apply current"
+
+[node name="menu_animation" type="OptionButton" parent="PNJ OPTION"]
+layout_mode = 2
+tooltip_text = "choice a animation"
+selected = 0
+item_count = 5
+popup/item_0/text = "choice animation"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_1/text = "animations"
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "seated"
+popup/item_2/id = 2
+popup/item_3/text = "idle"
+popup/item_3/id = 3
+popup/item_4/text = "dance"
+popup/item_4/id = 4
+
+[node name="menu_dialog" type="OptionButton" parent="PNJ OPTION"]
+layout_mode = 2
+tooltip_text = "choice a dialog file"
+selected = 0
+item_count = 5
+popup/item_0/text = "choice a dialog file"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_1/text = "dialog"
+popup/item_1/id = 1
+popup/item_1/separator = true
+popup/item_2/text = "dialog 1"
+popup/item_2/id = 2
+popup/item_3/text = "dialog 2"
+popup/item_3/id = 3
+popup/item_4/text = "dialog 3"
+popup/item_4/id = 4
+
+[node name="accepte" type="Button" parent="PNJ OPTION"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xar8w")
+text = "add to this state"
+
+[connection signal="value_changed" from="PNJ OPTION/HSlider_state" to="." method="_on_h_slider_state_value_changed"]

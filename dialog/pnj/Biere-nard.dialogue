@@ -1,0 +1,24 @@
+~ start
+Bière-nard Bush: Tiens, encore un jeune à courir dans ma taverne. Faut pas oublier que l’alcool n’est pas pour les enfants.
+~ question
+- Avez-vous vu quelque chose cette nuit ? 👀
+	Moi: Vous avez remarqué quelque chose d’étrange cette nuit ?
+	Bière-nard Bush: Bah oui… un grand bruit, puis des gens qui couraient. Mais je ne peux pas dire qui c’était. Ce n’est pas bien de mentir, hein.
+	Moi: D’accord, merci.
+	=> question
+- Les villageois ont peur ? 😨
+	Moi: Tout le monde a l’air paniqué…
+	Bière-nard Bush: Oui… et ils ont raison. Mais faut rester calme, hein… même si le Sire est bizarrement joyeux.
+	Moi: Oui, étrange…
+	set StoryStates.bierenard_dialog1 = true
+	do StoryStates.verifier_progression()
+	=> question
+- Une boisson pour moi ? 🍺
+	Moi: Je peux avoir un verre ?
+	Bière-nard Bush: Non, pas pour toi. Mais tu peux toujours écouter les histoires des adultes, ça nourrit aussi l’esprit.
+	Moi: Haha, ça marche.
+	=> question
+- Au revoir ! ➜] 
+	Moi: Je dois y aller.
+	Bière-nard Bush: Va avec prudence, petit. Et reste loin des ennuis !
+	=> END

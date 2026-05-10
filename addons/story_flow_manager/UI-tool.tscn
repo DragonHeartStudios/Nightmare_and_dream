@@ -1,0 +1,957 @@
+[gd_scene load_steps=27 format=3 uid="uid://bk07dp8i5hx3k"]
+
+[ext_resource type="Script" uid="uid://btujryi2roxum" path="res://addons/story_flow_manager/ui_tool.gd" id="1_p2qtr"]
+
+[sub_resource type="Animation" id="Animation_jph6p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("notif:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("notif:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("notif:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("notif/MarginContainer/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["KeyFrame as been added !"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("notif/MarginContainer/Label:theme_override_colors/font_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.319, 0.58, 0.38425002, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("notif:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-46.0]
+}
+
+[sub_resource type="Animation" id="Animation_577v7"]
+resource_name = "add keyframe"
+length = 2.0
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("notif:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.23333333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("notif:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.55, 0.55), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("notif:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("notif/MarginContainer/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["KeyFrame as been added !"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("notif/MarginContainer/Label:theme_override_colors/font_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.319, 0.58, 0.38425002, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("notif:position:y")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 10.0]
+}
+
+[sub_resource type="Animation" id="Animation_gfyn3"]
+resource_name = "del_keyframe"
+length = 2.0
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("notif:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.23333333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("notif:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.545, 0.545), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("notif:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("notif/MarginContainer/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["keyframe are deleted !"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("notif/MarginContainer/Label:theme_override_colors/font_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.78262776, 0.35228357, 0.42710096, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("notif:position:y")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 10.98]
+}
+
+[sub_resource type="Animation" id="Animation_p2qtr"]
+resource_name = "not pnj"
+length = 2.0
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("notif:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.23333333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("notif:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.545, 0.545), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("notif:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("notif/MarginContainer/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["no PNJ are selected !"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("notif/MarginContainer/Label:theme_override_colors/font_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.78262776, 0.35228357, 0.42710096, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("notif:position:y")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 10.98]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gfyn3"]
+_data = {
+&"RESET": SubResource("Animation_jph6p"),
+&"add keyframe": SubResource("Animation_577v7"),
+&"del_keyframe": SubResource("Animation_gfyn3"),
+&"not pnj": SubResource("Animation_p2qtr")
+}
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_kiv5y"]
+content_margin_left = 0.0
+content_margin_top = 4.0
+content_margin_right = 0.0
+content_margin_bottom = 4.0
+thickness = 5
+vertical = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4uksy"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.16, 0.16, 0.16, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kiv5y"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.20871028, 0.2087101, 0.20871013, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_36j3b"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.19889998, 0.39, 0.19889998, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xar8w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3loh0"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8gcle"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sb85m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_drxe3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nbpy2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hr32t"]
+
+[sub_resource type="Theme" id="Theme_ch8eb"]
+Button/styles/disabled = SubResource("StyleBoxEmpty_xar8w")
+Button/styles/normal = SubResource("StyleBoxFlat_3loh0")
+SpinBox/colors/down_disabled_icon_modulate = Color(0.875, 0.875, 0.875, 0.5)
+SpinBox/styles/down_background = SubResource("StyleBoxEmpty_8gcle")
+SpinBox/styles/down_background_disabled = SubResource("StyleBoxEmpty_sb85m")
+SpinBox/styles/down_background_hovered = SubResource("StyleBoxEmpty_drxe3")
+SpinBox/styles/down_background_pressed = SubResource("StyleBoxEmpty_nbpy2")
+SpinBox/styles/field_and_buttons_separator = SubResource("StyleBoxEmpty_hr32t")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txe5u"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.21779999, 0.31361002, 0.66, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xar8w"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0.49133337, 0.67, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_577v7"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jph6p"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hc8vb"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.032543443, 0.012715651, 0.17565605, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2da4l"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.03137255, 0.011764706, 0.1764706, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekq0r"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.84314084, 0, 0.18903679, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p2qtr"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.89411765)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(0.46229076, 0.46229059, 0.4622904, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 5
+
+[node name="Story-Flow-Manager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p2qtr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_gfyn3")
+}
+autoplay = "RESET"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="background" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/background"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="action and condition" type="HBoxContainer" parent="MarginContainer/background"]
+visible = false
+layout_mode = 2
+alignment = 1
+
+[node name="add action" type="VBoxContainer" parent="MarginContainer/background/action and condition"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/background/action and condition/add action"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "add action"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/background/action and condition/add action"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="MenuButton" type="MenuButton" parent="MarginContainer/background/action and condition/add action"]
+layout_mode = 2
+text = "add actions..."
+item_count = 7
+popup/item_0/text = "move a pnj"
+popup/item_0/id = 0
+popup/item_1/text = "give items to the player"
+popup/item_1/id = 1
+popup/item_2/text = "unlock door"
+popup/item_2/id = 2
+popup/item_3/text = "change dialog"
+popup/item_3/id = 3
+popup/item_4/text = "change sky"
+popup/item_4/id = 4
+popup/item_5/text = "ajouter une pensée"
+popup/item_5/id = 5
+popup/item_6/text = "ajouter une nouvelle quetes/objectif"
+popup/item_6/id = 6
+
+[node name="Label2" type="Label" parent="MarginContainer/background/action and condition/add action"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "choice state/timeline : 0"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/background/action and condition/add action"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/background/action and condition/add action"]
+layout_mode = 2
+text = "add to this state"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/background/action and condition"]
+layout_mode = 2
+theme_override_constants/separation = 50
+theme_override_styles/separator = SubResource("StyleBoxLine_kiv5y")
+
+[node name="add condition" type="VBoxContainer" parent="MarginContainer/background/action and condition"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/background/action and condition/add condition"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "add condition"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/background/action and condition/add condition"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="MenuButton" type="MenuButton" parent="MarginContainer/background/action and condition/add condition"]
+layout_mode = 2
+text = "add conditions..."
+item_count = 4
+popup/item_0/text = "player had this item"
+popup/item_0/id = 0
+popup/item_1/text = "door is opened"
+popup/item_1/id = 1
+popup/item_2/text = "door is unlocked"
+popup/item_2/id = 2
+popup/item_3/text = "player speaked with this pnj"
+popup/item_3/id = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/background/action and condition/add condition"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "state/timeline : 0"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/background/action and condition/add condition"]
+layout_mode = 2
+tick_count = 1
+ticks_on_borders = true
+ticks_position = 2
+
+[node name="Button" type="Button" parent="MarginContainer/background/action and condition/add condition"]
+layout_mode = 2
+text = "add this rule for this state"
+
+[node name="Containerpanel" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4uksy")
+
+[node name="MarginContainer" type="MarginContainer" parent="Containerpanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PNJ OPTION" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label_pnj_selected" type="RichTextLabel" parent="VBoxContainer/PNJ OPTION"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "No object currently selected"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="label_state" type="Label" parent="VBoxContainer/PNJ OPTION"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Selected State : 0"
+horizontal_alignment = 1
+
+[node name="state_slider" type="HSlider" parent="VBoxContainer/PNJ OPTION"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/PNJ OPTION"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kiv5y")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/PNJ OPTION/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="transforme hbox" type="VBoxContainer" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="transofrmelabel" type="Label" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox"]
+layout_mode = 2
+text = "Transform"
+
+[node name="position" type="PanelContainer" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_36j3b")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer"]
+layout_mode = 2
+text = " position:"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "  x"
+
+[node name="position_x" type="SpinBox" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = -9999999999.0
+max_value = 9999999999.0
+step = 0.001
+
+[node name="Label4" type="Label" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "  y"
+
+[node name="position_y" type="SpinBox" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = SubResource("Theme_ch8eb")
+min_value = -9999999999.0
+max_value = 9999999999.0
+step = 0.001
+
+[node name="Label5" type="Label" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "  z"
+
+[node name="position_z" type="SpinBox" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = -9999999999.0
+max_value = 9999999999.0
+step = 0.001
+
+[node name="apply_current_position" type="Button" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "apply current"
+
+[node name="direction" type="PanelContainer" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_txe5u")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer"]
+layout_mode = 2
+text = " direction:"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "  x"
+
+[node name="direction_x" type="SpinBox" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = -9999999999.0
+max_value = 9999999999.0
+step = 0.001
+
+[node name="Label4" type="Label" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "  y"
+
+[node name="direction_y" type="SpinBox" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = -9999999999.0
+max_value = 9999999999.0
+step = 0.001
+
+[node name="Label5" type="Label" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "  z"
+
+[node name="direction_z" type="SpinBox" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = -9999999999.0
+max_value = 9999999999.0
+step = 0.001
+
+[node name="apply_current_direction" type="Button" parent="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+text = "apply current"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PNJ OPTION"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/PNJ OPTION/HBoxContainer"]
+layout_mode = 2
+text = "Select Animation"
+
+[node name="menu_animation" type="OptionButton" parent="VBoxContainer/PNJ OPTION/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(175, 0)
+layout_mode = 2
+tooltip_text = "Select Animation"
+selected = 0
+item_count = 1
+popup/item_0/text = "Select Animation"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/PNJ OPTION"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/PNJ OPTION/HBoxContainer2"]
+layout_mode = 2
+text = "Select Dialog"
+
+[node name="menu_dialog" type="OptionButton" parent="VBoxContainer/PNJ OPTION/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(175, 0)
+layout_mode = 2
+tooltip_text = "Select Dialog"
+selected = 0
+item_count = 1
+popup/item_0/text = "Select Dialog"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+
+[node name="accepte" type="Button" parent="VBoxContainer/PNJ OPTION"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_xar8w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_577v7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jph6p")
+text = "Save KeyFrame"
+
+[node name="timeline" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/timeline"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label_timeline" type="Label" parent="VBoxContainer/timeline"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Preview TimeLine"
+horizontal_alignment = 1
+
+[node name="timeline_slider" type="HSlider" parent="VBoxContainer/timeline"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/timeline"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Button_before" type="Button" parent="VBoxContainer/timeline/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_hc8vb")
+text = "Before"
+
+[node name="Button_after" type="Button" parent="VBoxContainer/timeline/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_2da4l")
+text = "After"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/timeline/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="SpinBox_timeline" type="SpinBox" parent="VBoxContainer/timeline/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer/timeline/HBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="instant_preview_state" type="Button" parent="VBoxContainer/timeline/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ekq0r")
+text = "Delete KeyFrame"
+
+[node name="notif" type="PanelContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -181.0
+offset_top = -46.0
+offset_right = -34.0
+offset_bottom = -22.0
+grow_horizontal = 0
+pivot_offset = Vector2(64.215, 0.31)
+theme_override_styles/panel = SubResource("StyleBoxFlat_p2qtr")
+
+[node name="MarginContainer" type="MarginContainer" parent="notif"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="notif/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.319, 0.58, 0.38425002, 1)
+theme_override_font_sizes/font_size = 10
+text = "KeyFrame as been added !"
+horizontal_alignment = 1
+
+[connection signal="value_changed" from="VBoxContainer/PNJ OPTION/state_slider" to="." method="_on_state_slider_value_changed"]
+[connection signal="pressed" from="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/position/VBoxContainer/apply_current_position" to="." method="_on_apply_current_position_pressed"]
+[connection signal="pressed" from="VBoxContainer/PNJ OPTION/PanelContainer/MarginContainer/transforme hbox/direction/VBoxContainer/apply_current_direction" to="." method="_on_apply_current_direction_pressed"]
+[connection signal="pressed" from="VBoxContainer/PNJ OPTION/accepte" to="." method="_on_accepte_pressed"]
+[connection signal="value_changed" from="VBoxContainer/timeline/timeline_slider" to="." method="_on_timeline_slider_value_changed"]
+[connection signal="pressed" from="VBoxContainer/timeline/HBoxContainer2/Button_before" to="." method="_on_button_before_pressed"]
+[connection signal="pressed" from="VBoxContainer/timeline/HBoxContainer2/Button_after" to="." method="_on_button_after_pressed"]
+[connection signal="value_changed" from="VBoxContainer/timeline/HBoxContainer2/SpinBox_timeline" to="." method="_on_spin_box_timeline_value_changed"]
+[connection signal="pressed" from="VBoxContainer/timeline/HBoxContainer2/instant_preview_state" to="." method="_on_button_delete_pressed"]

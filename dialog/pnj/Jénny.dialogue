@@ -1,0 +1,24 @@
+~ start
+Jény Kétasseur: Oh, toi là… t’as l’air d’un enfant qui court après des problèmes. Qu’est-ce que tu veux ?
+~ question
+- Avez-vous vu quelque chose d’étrange ? 👀
+	Moi: T’as vu quelqu’un de suspect cette nuit ?
+	Jény Kétasseur: Eh bien… j’ai vu un homme étrange près de la bibliothèque. Il avait l’air pressé et… un peu bizarre. 
+	Moi: Intéressant… merci.
+	set StoryStates.jenny_dialog1 = true
+	do StoryStates.verifier_progression()
+	=> question
+- Que savez-vous du kidnapping ? 😟
+	Moi: Tu sais ce qui s’est passé ?
+	Jény Kétasseur: Pas grand-chose… juste des cris et des ombres qui passaient. Et maintenant tout le village parle de ça.
+	Moi: Ok, je vais enquêter alors.
+	=> question
+- Vendez-vous encore du poisson ? 🐟
+	Moi: Et sinon, vous vendez toujours votre poisson ?
+	Jény Kétasseur: Bien sûr ! Mais fais gaffe à ce que tu manges… tout le monde est un peu nerveux ces jours-ci.
+	Moi: Haha, compris.
+	=> question
+- Au revoir ! ➜] 
+	Moi: Je dois y aller.
+	Jény Kétasseur: D’accord… et fais attention à toi, petit curieux.
+	=> END
