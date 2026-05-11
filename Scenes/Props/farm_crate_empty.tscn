@@ -64,16 +64,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ieqaw")
 
-[node name="FarmCrate_Empty" type="Node3D"]
+[node name="FarmCrate_Empty" type="RigidBody3D" groups=["object_grab"]]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017054304, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0034179688, 0.104234144, -0.0020751953)
 shape = SubResource("BoxShape3D_j2524")
 
 [node name="FarmCrate_Empty" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01661931, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0004349947, 0)
 mesh = SubResource("ArrayMesh_wylya")
 skeleton = NodePath("")

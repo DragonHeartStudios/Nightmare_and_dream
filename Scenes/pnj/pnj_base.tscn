@@ -11,19 +11,6 @@ height = 1.7575014
 [node name="PNJ_BASE" type="StaticBody3D" groups=["interacteble"]]
 process_mode = 3
 script = ExtResource("1_rdhvb")
-movement_rule = Array[Dictionary]([{
-"position": Vector3(0, 0, 0),
-"rotation": Vector3(0, 0, 0),
-"state": 0
-}, {
-"position": Vector3(0, 0, 0),
-"rotation": Vector3(0, 0, 0),
-"state": 0
-}, {
-"position": Vector3(0, 0, 0),
-"rotation": Vector3(0, 0, 0),
-"state": 0
-}])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.9621929, 0, 0, 0, 0.9621929, 0, 0, 0, 0.9621929, 0, 0.8298738, 0)

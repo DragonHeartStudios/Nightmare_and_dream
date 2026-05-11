@@ -1090,7 +1090,7 @@ _data = {
 &"mixamo_com": SubResource("Animation_n7r48")
 }
 
-[node name="Lenny barre" type="Node3D"]
+[node name="Lenny barre" type="Node3D" groups=["pnj"]]
 
 [node name="PNJ_BASE" parent="." instance=ExtResource("1_wdds2")]
 nom = "Lenny barre"

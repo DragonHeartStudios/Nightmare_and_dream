@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bylxr1cmi1dbl"]
+[gd_scene format=4 uid="uid://bylxr1cmi1dbl"]
 
 [ext_resource type="Texture2D" uid="uid://wxcmmdl57itf" path="res://assets/models/props3/T_Trim_Props_BaseColor.png" id="1_mrdhw"]
 [ext_resource type="Texture2D" uid="uid://dgr6rw6h1v7mb" path="res://assets/models/props3/T_Trim_Props_ORM.png" id="2_hopf0"]
@@ -6,6 +6,9 @@
 [ext_resource type="Shader" uid="uid://pn80x7vapsyx" path="res://shaders/outline.gdshader" id="3_hopf0"]
 [ext_resource type="Material" uid="uid://b3uhrde53umn7" path="res://resources/materials/MAT_wall_wood.tres" id="4_exoea"]
 [ext_resource type="Material" uid="uid://bekop88d10ubu" path="res://resources/materials/metal.tres" id="5_pyn0f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j2524"]
+size = Vector3(0.6220703, 0.38277435, 0.40795898)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0y2l1"]
 render_priority = 0
@@ -107,18 +110,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7sidc")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_j2524"]
-size = Vector3(0.6220703, 0.23861694, 0.40795898)
+[node name="FarmCrate_Carrot" type="RigidBody3D" unique_id=2058395075]
 
-[node name="FarmCrate_Carrot" type="Node3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=819724253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0034179688, 0.17643356, -0.0020751953)
+shape = SubResource("BoxShape3D_j2524")
 
-[node name="FarmCrate_Carrot" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017054304, 0)
+[node name="FarmCrate_Carrot" type="MeshInstance3D" parent="." unique_id=155644628]
 mesh = SubResource("ArrayMesh_o8d1y")
 skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="FarmCrate_Carrot"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="FarmCrate_Carrot/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0034179688, 0.13739014, -0.0020751953)
-shape = SubResource("BoxShape3D_j2524")

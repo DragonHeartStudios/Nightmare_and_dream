@@ -1,5 +1,5 @@
 extends StaticBody3D
-@onready var crossair: TextureRect = get_tree().get_first_node_in_group("crossair")
+
 
 @onready var mesh: MeshInstance3D = $MeshInstance3D
 @onready var anim_cinematique: AnimationPlayer = %AnimationPlayer

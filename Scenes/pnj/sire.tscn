@@ -1219,7 +1219,7 @@ _data = {
 &"mixamo_com": SubResource("Animation_8x6dq")
 }
 
-[node name="sire" type="Node3D"]
+[node name="sire" type="Node3D" groups=["pnj"]]
 
 [node name="PNJ_BASE" parent="." instance=ExtResource("2_ct2ka")]
 nom = "Sire Conférence"

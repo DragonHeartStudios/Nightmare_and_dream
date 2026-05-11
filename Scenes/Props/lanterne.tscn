@@ -1,10 +1,13 @@
-[gd_scene load_steps=20 format=4 uid="uid://bgd5grvme7t6l"]
+[gd_scene format=4 uid="uid://bgd5grvme7t6l"]
 
 [ext_resource type="Material" uid="uid://bekop88d10ubu" path="res://resources/materials/metal.tres" id="1_dsa35"]
 [ext_resource type="Texture2D" uid="uid://br5nsd6lio5vx" path="res://assets/models/asset pack/lumier/lighting_fixtures_set_1_free_0.png" id="1_yrccr"]
 [ext_resource type="Texture2D" uid="uid://crs2qf0b5m7m1" path="res://assets/models/asset pack/lumier/lighting_fixtures_set_1_free_1.png" id="2_dsa35"]
 [ext_resource type="Texture2D" uid="uid://bkxf4qpsne0bx" path="res://assets/models/asset pack/lumier/lighting_fixtures_set_1_free_2.png" id="3_rk8wt"]
 [ext_resource type="Texture2D" uid="uid://cto5lohm1xm11" path="res://assets/models/asset pack/lumier/lighting_fixtures_set_1_free_3.png" id="4_c1c0d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yrccr"]
+size = Vector3(0.109191895, 0.28271866, 0.105529785)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4jna"]
 resource_name = "Shutter"
@@ -202,51 +205,45 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_oii8c")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_yrccr"]
-size = Vector3(0.13769531, 0.47561646, 0.119262695)
+[node name="lanterne" type="RigidBody3D" unique_id=371407037 groups=["object_grab"]]
 
-[node name="lanterne" type="Node3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1629856773]
+transform = Transform3D(2.9393218, 0, 0, 0, 2.9393218, 0, 0, 0, 2.9393218, -0.0017572676, 0.41772172, 0.017342571)
+shape = SubResource("BoxShape3D_yrccr")
 
-[node name="model" type="Node3D" parent="."]
-transform = Transform3D(8.4193374e-10, -0.011151752, -1.8168511e-09, 2.4761865e-18, -1.8168511e-09, 0.011151752, -0.011151752, -8.4193374e-10, -1.3371406e-16, -0.0008516767, 0.5940563, 0.010260112)
+[node name="model" type="Node3D" parent="." unique_id=1660142929]
+transform = Transform3D(8.4193374e-10, -0.011151752, -1.8168511e-09, 2.4761865e-18, -1.8168511e-09, 0.011151752, -0.011151752, -8.4193374e-10, -1.3371406e-16, -0.00078466587, 0.5842818, 0.009452835)
 
-[node name="Hanging Lamp Holder_Shutter_0" type="MeshInstance3D" parent="model"]
+[node name="Hanging Lamp Holder_Shutter_0" type="MeshInstance3D" parent="model" unique_id=2079388984]
 material_override = ExtResource("1_dsa35")
 mesh = SubResource("ArrayMesh_1rwwe")
 skeleton = NodePath("")
 
-[node name="Hanging LampShell_Wood Panel_0" type="MeshInstance3D" parent="model"]
+[node name="Hanging LampShell_Wood Panel_0" type="MeshInstance3D" parent="model" unique_id=411854411]
 transform = Transform3D(1.6404646e-06, 2.4795334e-06, -19.722183, -21.728611, -5.35071e-06, -1.4889837e-06, -3.5400406e-06, 32.842422, 1.488983e-06, 0, 7.6293945e-06, -27.983812)
 material_overlay = ExtResource("1_dsa35")
 mesh = SubResource("ArrayMesh_dki1w")
 skeleton = NodePath("")
 
-[node name="Hanging LampBase_Wood Panel_0" type="MeshInstance3D" parent="model"]
+[node name="Hanging LampBase_Wood Panel_0" type="MeshInstance3D" parent="model" unique_id=1255170472]
 transform = Transform3D(1.6404646e-06, 2.4795334e-06, -19.722183, -21.728611, -5.35071e-06, -1.4889837e-06, -3.5400406e-06, 32.842422, 1.488983e-06, 0, 7.6293945e-06, -27.983812)
 material_override = ExtResource("1_dsa35")
 mesh = SubResource("ArrayMesh_l0ch1")
 skeleton = NodePath("")
 
-[node name="Curvy Holder_Shutter_0" type="MeshInstance3D" parent="model"]
+[node name="Curvy Holder_Shutter_0" type="MeshInstance3D" parent="model" unique_id=782954286]
 transform = Transform3D(63.398098, 6.5412567e-12, 7.5576413e-06, -7.5576418e-06, 6.524756e-05, 63.39809, -1.2312963e-12, -63.39809, 6.524756e-05, 35.22972, 0, 20.52943)
 material_override = ExtResource("1_dsa35")
 mesh = SubResource("ArrayMesh_3mceu")
 skeleton = NodePath("")
 
-[node name="Hanging LampGlass_Hanging Lamp Translucent_0" type="MeshInstance3D" parent="model"]
+[node name="Hanging LampGlass_Hanging Lamp Translucent_0" type="MeshInstance3D" parent="model" unique_id=1563882600]
 transform = Transform3D(1.6404646e-06, 2.4795334e-06, -19.722183, -21.728611, -5.35071e-06, -1.4889837e-06, -3.5400406e-06, 32.842422, 1.488983e-06, 0, 7.6293945e-06, -27.983812)
 mesh = SubResource("ArrayMesh_xkjws")
 skeleton = NodePath("")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.701081e-05, 0.23539516, 0.00080727646)
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1632860861]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22562063, 0)
 light_color = Color(1, 1, 0.72156864, 1)
 light_size = 0.105
 shadow_enabled = true
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(0.7960507, 0, 0, 0, 0.7960507, 0, 0, 0, 0.7960507, -6.701081e-05, 0.009774536, 0.00080727646)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(2.9393218, 0, 0, 0, 2.9393218, 0, 0, 0, 2.9393218, 0.00048525765, 0.668195, -0.0028401508)
-shape = SubResource("BoxShape3D_yrccr")

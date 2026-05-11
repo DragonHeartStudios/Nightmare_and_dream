@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://pgcfvwr70bpo"]
+[gd_scene format=4 uid="uid://pgcfvwr70bpo"]
 
 [ext_resource type="Material" uid="uid://b3uhrde53umn7" path="res://resources/materials/MAT_wall_wood.tres" id="1_v51cm"]
 [ext_resource type="Material" uid="uid://bekop88d10ubu" path="res://resources/materials/metal.tres" id="2_52my4"]
@@ -61,15 +61,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_kpfuf")
 
-[node name="basin" type="Node3D"]
+[node name="basin" type="RigidBody3D" unique_id=57401656]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=751143693]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28875732, 0)
 visible = false
 shape = SubResource("CylinderShape3D_3c2c6")
 
-[node name="Basin_B" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="Basin_B" type="MeshInstance3D" parent="." unique_id=1686172603]
 mesh = SubResource("ArrayMesh_v51cm")
 skeleton = NodePath("")

@@ -24,10 +24,10 @@ func _process(_delta):
 			collider.you_are_collide()
 
 		# On vérifie si le collider est un objet interactible et a la méthode interact
-		if collider.is_in_group("interacteble") and collider.has_method("interact"):
+		if collider.is_in_group("interacteble"):
 			interaction.show()
 			crossair.show()
-			if Input.is_action_just_pressed("interact"):
+			if Input.is_action_just_pressed("interact") and collider.has_method("interact"):
 				collider.interact()
 			
 		else:

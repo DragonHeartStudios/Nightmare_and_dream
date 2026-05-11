@@ -1,8 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://blqroy8lwk2t4"]
+[gd_scene format=4 uid="uid://blqroy8lwk2t4"]
 
 [ext_resource type="Shader" uid="uid://pn80x7vapsyx" path="res://shaders/outline.gdshader" id="1_yw032"]
 [ext_resource type="Material" uid="uid://b3uhrde53umn7" path="res://resources/materials/MAT_wall_wood.tres" id="2_qe2ky"]
 [ext_resource type="Material" uid="uid://bekop88d10ubu" path="res://resources/materials/metal.tres" id="3_qpwy4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_416fy"]
+size = Vector3(0.10610962, 1.6401367, 0.3137207)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mpta2"]
 render_priority = 0
@@ -66,18 +69,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_a7mv3")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_416fy"]
-size = Vector3(0.10610962, 1.6401367, 0.3137207)
+[node name="fourche" type="RigidBody3D" unique_id=1831994137]
 
-[node name="fourche" type="Node3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=790186819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004257202, 0.8210449, -0.0028076172)
+shape = SubResource("BoxShape3D_416fy")
 
-[node name="Pitchfork_A" type="MeshInstance3D" parent="."]
+[node name="Pitchfork_A" type="MeshInstance3D" parent="." unique_id=1223916794]
 material_overlay = SubResource("ShaderMaterial_mpta2")
 mesh = SubResource("ArrayMesh_nvkjx")
 skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Pitchfork_A"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pitchfork_A/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004257202, 0.8210449, -0.0028076172)
-shape = SubResource("BoxShape3D_416fy")

@@ -1,11 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://bc12rc53uiapg"]
+[gd_scene format=4 uid="uid://bc12rc53uiapg"]
 
 [ext_resource type="Material" uid="uid://b3uhrde53umn7" path="res://resources/materials/MAT_wall_wood.tres" id="1_evahl"]
 [ext_resource type="Material" uid="uid://bekop88d10ubu" path="res://resources/materials/metal.tres" id="2_a83q8"]
 [ext_resource type="Shader" uid="uid://tnamnnwd827t" path="res://shaders/cel-shader-base.gdshader" id="3_evahl"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_xk2bn"]
-height = 0.95532227
+height = 0.9503174
 radius = 0.38964844
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a83q8"]
@@ -97,15 +97,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_megxr")
 
-[node name="barile" type="Node3D"]
+[node name="barile" type="RigidBody3D" unique_id=216625193]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47766113, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=468040322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4751587, 0)
 shape = SubResource("CylinderShape3D_xk2bn")
 
-[node name="Object_2" type="MeshInstance3D" parent="."]
+[node name="Object_2" type="MeshInstance3D" parent="." unique_id=839407983]
 transform = Transform3D(0.3772581, 0, 0, 0, 0.3772581, 0, 0, 0, 0.3772581, 0, 0.48183843, 0)
 mesh = SubResource("ArrayMesh_mam7p")
 skeleton = NodePath("")

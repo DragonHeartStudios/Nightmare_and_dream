@@ -35,6 +35,8 @@ var is_in_interior := false
 @onready var chant_de_ble_sound: AudioStreamPlayer3D = $chant_de_ble
 @onready var collisionshape: CollisionShape3D = $Collision
 @onready var ray_cast_crouch: RayCast3D = $RayCast_crouch
+@onready var system_grabe: Node3D = $tete/secouse/SpringArmPivot/CameraFPV/system_grabe
+
 
 
 var on_chant_de_ble := false
@@ -92,7 +94,7 @@ func _physics_process(delta):
 				if not Ui.queue_msg.has("vous ne pouver pas courire a l'interieur d'un batiment !"):
 					Ui.feedback("vous ne pouver pas courire a l'interieur d'un batiment !")
 					
-		if Input.is_action_pressed("run") and not is_in_interior and not crouch:
+		if Input.is_action_pressed("run") and not is_in_interior and not crouch and not system_grabe.picked_object:
 			target_speed = run_speed #si un appuie sur run et qu'on est pas a l'interiere on met target_speed = run_speed
 				
 		else:#si on run pas

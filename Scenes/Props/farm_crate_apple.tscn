@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://sdms6p34mj7v"]
+[gd_scene format=4 uid="uid://sdms6p34mj7v"]
 
 [ext_resource type="Material" uid="uid://b3uhrde53umn7" path="res://resources/materials/MAT_wall_wood.tres" id="1_nbh7u"]
 [ext_resource type="Material" uid="uid://bekop88d10ubu" path="res://resources/materials/metal.tres" id="2_1rxia"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://wxcmmdl57itf" path="res://assets/models/props3/T_Trim_Props_BaseColor.png" id="7_om7hx"]
 [ext_resource type="Texture2D" uid="uid://dgr6rw6h1v7mb" path="res://assets/models/props3/T_Trim_Props_ORM.png" id="8_dd57m"]
 [ext_resource type="Texture2D" uid="uid://b0cxc76bjb4n7" path="res://assets/models/props3/T_Trim_Props_Normal.png" id="9_v540r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j2524"]
+size = Vector3(0.6220703, 0.23861694, 0.40795898)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_po6dm"]
 render_priority = 0
@@ -107,19 +110,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4504b")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_j2524"]
-size = Vector3(0.6220703, 0.23861694, 0.40795898)
+[node name="FarmCrate_Apple" type="RigidBody3D" unique_id=1634154638]
 
-[node name="FarmCrate_Apple" type="Node3D"]
-
-[node name="FarmCrate_Apple" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.013551161, 0)
-mesh = SubResource("ArrayMesh_sscoo")
-skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017054304, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1561456632]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0034179688, 0.104234144, -0.0020751953)
 shape = SubResource("BoxShape3D_j2524")
+
+[node name="FarmCrate_Apple" type="MeshInstance3D" parent="." unique_id=548460315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0035031438, 0)
+mesh = SubResource("ArrayMesh_sscoo")
+skeleton = NodePath("")

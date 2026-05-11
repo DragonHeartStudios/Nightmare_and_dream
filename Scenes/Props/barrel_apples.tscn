@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://17mmpsbs0t2t"]
+[gd_scene format=4 uid="uid://17mmpsbs0t2t"]
 
 [ext_resource type="Material" uid="uid://b3uhrde53umn7" path="res://resources/materials/MAT_wall_wood.tres" id="1_jabas"]
 [ext_resource type="Material" uid="uid://bekop88d10ubu" path="res://resources/materials/metal.tres" id="2_5234s"]
@@ -107,17 +107,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_rh5v1")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_g7xws"]
-points = PackedVector3Array(0.29729557, 0.16877495, 0.09468547, -0.33759966, 0.3714709, -0.01320334, -0.33748057, 0.37149942, 0.013643079, 0.25830117, 0.8871802, 0.013787839, 0.08210481, 0.22027862, -0.3138726, -0.12168692, 0.018973503, 0.2304509, -0.013336446, 0.7103447, 0.31253716, -0.13625813, 0.8754985, -0.21809292, -0.12182373, 0.018487107, -0.2302648, -0.22817975, 0.8553661, 0.13451445, 0.2289032, 0.6676564, -0.22845873, 0.23045085, 0.01897358, -0.1216206, 0.17520644, 0.41217473, 0.29629868, -0.17492104, 0.41205376, 0.29656783, -0.17398217, 0.49252996, -0.29453477, 0.1373786, 0.01345663, 0.21968587, 0.33790562, 0.50638705, 0.013708416, 0.08201105, 0.72519135, -0.29989263, -0.2561858, 0.020434747, 0.02717778, 0.14786255, 0.85508555, 0.21494791, -0.30001545, 0.72536373, -0.08161826, -0.26900238, 0.21017954, -0.17471448, 0.027342044, 0.18081908, 0.3125653, -0.29616433, 0.4120482, 0.17532378, 0.29657486, 0.4121372, -0.1749252, 0.26966467, 0.66797507, 0.17536643, 0.122116566, 0.8724274, -0.23010367, -0.121909045, 0.87301505, 0.23087038, 0.13749184, 0.013094256, -0.21942256, 0.18551265, 0.90852696, 0.114145145, -0.28260353, 0.68125546, 0.14835966, -0.013269841, 0.37146872, -0.33760878)
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jabas"]
+height = 0.9020996
+radius = 0.3486328
 
-[node name="Barrel_Apples" type="Node3D"]
-
-[node name="Barrel_Apples" type="MeshInstance3D" parent="."]
+[node name="Barrel_Apples" type="RigidBody3D" unique_id=200257822]
 transform = Transform3D(1.3315059, 0, 0, 0, 1.3315059, 0, 0, 0, 1.3315059, 0, 0, 0)
+
+[node name="Barrel_Apples" type="MeshInstance3D" parent="." unique_id=189607681]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 mesh = SubResource("ArrayMesh_y558b")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Barrel_Apples"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel_Apples/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_g7xws")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=425622642]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 0.4487304, 0)
+shape = SubResource("CylinderShape3D_jabas")

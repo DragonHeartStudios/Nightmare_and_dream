@@ -1,7 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://b4f73axhh5d6h"]
+[gd_scene format=4 uid="uid://b4f73axhh5d6h"]
 
 [ext_resource type="Shader" uid="uid://pn80x7vapsyx" path="res://shaders/outline.gdshader" id="1_jn5mb"]
 [ext_resource type="Texture2D" uid="uid://kuadp768mtli" path="res://assets/models/props2/Bag_1_B_City Atlas Map.png" id="2_38bgj"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jn5mb"]
+height = 0.7844238
+radius = 0.4140625
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mpew7"]
 render_priority = 0
@@ -45,18 +49,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0msyt")
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_ugbtq"]
-radius = 0.4292752
+[node name="bag1" type="RigidBody3D" unique_id=1662177897 groups=["object_grab"]]
 
-[node name="bag1" type="Node3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=60625082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39251298, 0)
+shape = SubResource("CylinderShape3D_jn5mb")
 
-[node name="Bag_1_B" type="MeshInstance3D" parent="."]
+[node name="Bag_1_B" type="MeshInstance3D" parent="." unique_id=88665758]
 material_overlay = SubResource("ShaderMaterial_mpew7")
 mesh = SubResource("ArrayMesh_jn5mb")
 skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Bag_1_B"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Bag_1_B/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3455159, 0)
-shape = SubResource("SphereShape3D_ugbtq")

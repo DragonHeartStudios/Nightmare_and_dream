@@ -1318,7 +1318,7 @@ _data = {
 &"mixamo_com": SubResource("Animation_sdtwd")
 }
 
-[node name="Alphonse" type="Node3D"]
+[node name="Alphonse" type="Node3D" groups=["pnj"]]
 
 [node name="PNJ_BASE" parent="." instance=ExtResource("2_dtfji")]
 nom = "Alphonse dansletas"
